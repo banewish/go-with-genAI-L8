@@ -22,7 +22,7 @@ type bookHandlerImpl struct {
 func NewBookHandler(repo repository.BookRepository) http.Handler {
 	impl := &bookHandlerImpl{repo: repo}
 	mux := http.NewServeMux()
-	log.Printf("📚 Registering book handlers...")
+	log.Printf("Registering book handlers...")
 	mux.HandleFunc("/api/v1/books", impl.handleBooks)
 	mux.HandleFunc("/api/v1/books/", impl.handleBooks)
 	return mux
@@ -64,7 +64,7 @@ func (h *bookHandlerImpl) ListBooks(w http.ResponseWriter, r *http.Request) {
 
 	books, err := h.repo.List(r.Context(), offset, limit)
 	if err != nil {
-		log.Printf("❌ Error listing books: %v", err)
+		log.Printf("Error listing books: %v", err)
 		http.Error(w, "Failed to list books", http.StatusInternalServerError)
 		return
 	}
@@ -89,7 +89,7 @@ func (h *bookHandlerImpl) GetBook(w http.ResponseWriter, r *http.Request) {
 
 	book, err := h.repo.FindByID(r.Context(), uint(id))
 	if err != nil {
-		log.Printf("❌ Error finding book %d: %v", id, err)
+		log.Printf("Error finding book %d: %v", id, err)
 		http.Error(w, "Book not found", http.StatusNotFound)
 		return
 	}
@@ -107,7 +107,7 @@ func (h *bookHandlerImpl) CreateBook(w http.ResponseWriter, r *http.Request) {
 
 	book, err := h.repo.Create(r.Context(), &req)
 	if err != nil {
-		log.Printf("❌ Error creating book: %v", err)
+		log.Printf("Error creating book: %v", err)
 		http.Error(w, "Failed to create book", http.StatusInternalServerError)
 		return
 	}
@@ -132,7 +132,7 @@ func (h *bookHandlerImpl) UpdateBook(w http.ResponseWriter, r *http.Request) {
 
 	book, err := h.repo.Update(r.Context(), uint(id), &req)
 	if err != nil {
-		log.Printf("❌ Error updating book %d: %v", id, err)
+		log.Printf("Error updating book %d: %v", id, err)
 		http.Error(w, "Failed to update book", http.StatusInternalServerError)
 		return
 	}
@@ -149,7 +149,7 @@ func (h *bookHandlerImpl) DeleteBook(w http.ResponseWriter, r *http.Request) {
 	}
 
 	if err := h.repo.Delete(r.Context(), uint(id)); err != nil {
-		log.Printf("❌ Error deleting book %d: %v", id, err)
+		log.Printf("Error deleting book %d: %v", id, err)
 		http.Error(w, "Failed to delete book", http.StatusInternalServerError)
 		return
 	}
