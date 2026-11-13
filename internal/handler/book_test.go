@@ -4,9 +4,9 @@ import (
 	"net/http"
 	"net/http/httptest"
 	"testing"
-	"homework/internal/handler"
-	"homework/internal/model"
-	"homework/internal/repository"
+	"libratrack/internal/handler"
+	"libratrack/internal/model"
+	"libratrack/internal/repository"
 	"context"
 	"gorm.io/gorm"
 )

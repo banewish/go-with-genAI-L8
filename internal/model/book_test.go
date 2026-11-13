@@ -2,7 +2,7 @@ package model_test
 
 import (
 	"testing"
-	"homework/internal/model"
+	"libratrack/internal/model"
 )
 
 func TestBook(t *testing.T) {

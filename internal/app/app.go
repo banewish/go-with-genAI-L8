@@ -7,8 +7,8 @@ package app
 import (
 	"net/http"
 
-	"homework/internal/handler"
-	"homework/internal/repository"
+	"libratrack/internal/handler"
+	"libratrack/internal/repository"
 	"gorm.io/gorm"
 )
 

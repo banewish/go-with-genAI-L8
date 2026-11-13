@@ -4,7 +4,7 @@ import (
 	"sync"
 	"time"
 
-	"homework/internal/model"
+	"libratrack/internal/model"
 )
 
 type PetRepository struct {

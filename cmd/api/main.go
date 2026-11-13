@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"os"
 
-	"homework/internal/app"
+	"libratrack/internal/app"
 )
 
 func main() {

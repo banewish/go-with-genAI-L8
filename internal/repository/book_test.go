@@ -3,8 +3,8 @@ package repository_test
 import (
 	"context"
 	"testing"
-	"homework/internal/model"
-	"homework/internal/repository"
+	"libratrack/internal/model"
+	"libratrack/internal/repository"
 	"gorm.io/gorm"
 )
 
