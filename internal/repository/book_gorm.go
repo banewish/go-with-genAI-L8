@@ -5,7 +5,7 @@ import (
 	"errors"
 	"time"
 
-	"libratrack/internal/model"
+	"homework/internal/model"
 
 	"gorm.io/gorm"
 )

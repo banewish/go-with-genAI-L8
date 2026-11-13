@@ -7,8 +7,8 @@ import (
 	"strconv"
 	"strings"
 
-	"libratrack/internal/model"
-	"libratrack/internal/repository"
+	"homework/internal/model"
+	"homework/internal/repository"
 )
 
 type PetHandler struct {

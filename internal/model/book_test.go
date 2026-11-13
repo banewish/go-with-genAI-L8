@@ -1,8 +1,8 @@
 package model_test
 
 import (
+	"homework/internal/model"
 	"testing"
-	"libratrack/internal/model"
 )
 
 func TestBook(t *testing.T) {

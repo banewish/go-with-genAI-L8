@@ -3,7 +3,7 @@ package repository
 import (
 	"context"
 
-	"libratrack/internal/model"
+	"homework/internal/model"
 )
 
 type BookRepository interface {

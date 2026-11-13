@@ -7,9 +7,9 @@ package app
 import (
 	"net/http"
 
-	"libratrack/internal/handler"
-	"libratrack/internal/repository"
 	"gorm.io/gorm"
+	"homework/internal/handler"
+	"homework/internal/repository"
 )
 
 // NewRouter must return a fully configured HTTP handler for your resource.
@@ -22,7 +22,12 @@ import (
 // TODO: replace this stub with your implementation.
 func NewRouter() http.Handler {
 	repo := repository.NewPetRepository()
-	return handler.NewPetHandler(repo)
+	mux := http.NewServeMux()
+	books := handler.NewLegacyBookHandler()
+	mux.Handle("/api/v1/books", books)
+	mux.Handle("/api/v1/books/", books)
+	mux.Handle("/", handler.NewPetHandler(repo))
+	return mux
 }
 
 // NewRouterWithDB creates a router with PostgreSQL database connection

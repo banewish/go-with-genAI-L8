@@ -1,3 +1,0 @@
-package handler
-
-// Author handler

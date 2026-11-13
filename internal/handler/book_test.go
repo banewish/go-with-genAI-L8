@@ -1,14 +1,13 @@
 package handler_test
 
 import (
+	"context"
+	"gorm.io/gorm"
+	"homework/internal/handler"
+	"homework/internal/model"
 	"net/http"
 	"net/http/httptest"
 	"testing"
-	"libratrack/internal/handler"
-	"libratrack/internal/model"
-	"libratrack/internal/repository"
-	"context"
-	"gorm.io/gorm"
 )
 
 type mockHandlerRepo struct {

@@ -9,7 +9,7 @@ import (
 	"testing"
 	"time"
 
-	"libratrack/internal/app"
+	"homework/internal/app"
 )
 
 // env bundles a fresh router with the student's variant.

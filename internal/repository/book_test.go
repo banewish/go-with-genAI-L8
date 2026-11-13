@@ -2,10 +2,9 @@ package repository_test
 
 import (
 	"context"
-	"testing"
-	"libratrack/internal/model"
-	"libratrack/internal/repository"
 	"gorm.io/gorm"
+	"homework/internal/model"
+	"testing"
 )
 
 type mockBookRepository struct {
