@@ -72,7 +72,7 @@ func (r *GormBookRepository) List(ctx context.Context, offset, limit int) ([]mod
 
 	// AFTER FIX: Fetch books with category JOIN in one query
 	if err := r.db.WithContext(ctx).
-		Joins("Category").
+		Joins("LEFT JOIN categories ON books.category_id = categories.id").
 		Offset(offset).
 		Limit(limit).
 		Order("books.id ASC").

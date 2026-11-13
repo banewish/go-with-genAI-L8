@@ -5,8 +5,6 @@ import (
 	"os"
 	"strconv"
 
-	"homework/internal/model"
-
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"
